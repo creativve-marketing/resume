@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме на позицию Продуктового маркетолога</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- БОКОВАЯ НАВИГАЦИЯ В ВИДЕ КНОПОК -->
+    <aside class="sidebar-nav">
+        <div class="nav-brand">PRODUCT<span>.MARKETING</span></div>
+        <div class="nav-menu-buttons">
+            <button class="menu-btn active" data-target="0">
+                <span class="btn-num">01</span> Приветствие
+            </button>
+            <button class="menu-btn" data-target="1">
+                <span class="btn-num">02</span> Компетенции
+            </button>
+            <button class="menu-btn" data-target="2">
+                <span class="btn-num">03</span> История
+            </button>
+            
+            <button class="menu-btn" data-target="3">
+                <span class="btn-num">04</span>
+                <span class="btn-text">Статистика опыта</span>
+            </button>
+            <button class="menu-btn" data-target="4">
+                <span class="btn-num">05</span>
+                <span class="btn-text">Навыки и знания</span>
+            </button>
+            <button class="menu-btn" data-target="5">
+                <span class="btn-num">06</span>
+                <span class="btn-text">Оффер</span>
+            </button>
+            
+        </div>
+        <div class="nav-footer">РЕЗЮМЕ ДЛЯ УФАНЕТА</div>
+    </aside>
+
+    <!-- ОСНОВНОЙ КОНТЕЙНЕР ПРИЛОЖЕНИЯ -->
+    <main class="app-container" id="app-viewport">
+
+        <!-- СЛАЙД 1: ПРИВЕТСТВИЕ -->
+        <section class="slide-section active" data-index="0">
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <div class="meta-tag">Готов присоединиться к вашей команде</div>
+                    <h1 class="main-title">
+                        Привет, <span class="accent-text">Уфанет!</span><br>
+                        Это мое резюме на позицию <br>
+                        продуктового маркетолога
+                    </h1>
+                    <p class="main-subtitle">Для просмотра резюме нажмите на кнопку «Смотреть резюме». А затем используйте боковое меню</p>
+                    <button class="action-button-next" id="next-slide-trigger">
+                        Смотреть резюме
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hero-visual">
+                    <div class="image-wrapper">
+                        <img src="img/hello.gif" alt="Гифка приветствия" class="interactive-gif">
+                        <div class="frame-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- СЛАЙД 2: АНАЛИТИЧЕСКИЙ ТЕРМИНАЛ -->
+        <section class="slide-section" data-index="1">
+            <div class="terminal-stepper-layout">
+                <div class="stepper-header">
+                    <div class="stepper-title-block">
+                        <span class="header-pre">Валидация данных</span>
+                        <h2>Мой опыт соответствует вакансии. Проверьте сами!</h2>
+                    </div>
+                </div>
+
+                <!-- ГОРИЗОНТАЛЬНЫЕ ТАБЫ ПОД ЗАГОЛОВКОМ -->
+                <div class="tabs-navigation-bar" id="steps-tabs-container"></div>
+
+                <div class="terminal-card-grid">
+                    <div class="terminal-panel panel-left-req">
+                        <div class="panel-tag text-accent">Ожидание Уфанета</div>
+                        <div class="requirement-bubble-text" id="step-requirement-display">Выберите требование выше для анализа...</div>
+                    </div>
+
+                    <div class="terminal-panel panel-right-resp">
+                        <div class="panel-tag text-success">Подтвержденный опыт</div>
+                        <div class="response-premium-content">
+                            <p class="response-main-text" id="step-response-display">Выберите шаг для просмотра опыта.</p>
+                            <div class="tech-stack-wrapper">
+                                <div class="stack-title">Инструменты и фреймворки:</div>
+                                <div class="tags-container" id="step-tags-display"></div>
+                            </div>
+                            <div class="metric-analytics-block">
+                                <div class="metric-info">
+                                    <span class="metric-label">Релевантность навыка</span>
+                                    <span class="metric-value">100%</span>
+                                </div>
+                                <div class="custom-progress-track">
+                                    <div class="custom-progress-fill" id="step-bar-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stepper-footer-controls" id="stepper-footer-status">
+                    <div class="step-counter-label" id="step-counter-text">Изучите требования вакансии выше</div>
+                </div>
+            </div>
+        </section>
+
+<!-- СЛАЙД 3: ИСТОРИЯ СОБЕСЕДОВАНИЙ -->
+<section class="slide-section" data-index="2">
+    <div class="history-page-layout">
+        <div class="stepper-header">
+            <div class="stepper-title-block">
+                <span class="header-pre">Ретроспектива взаимоотношений</span>
+                <h2>История наших собеседований</h2>
+            </div>
+        </div>
+
+        <!-- Год над первыми карточками -->
+        <div class="history-year-title">Год 2023</div>
+
+        <!-- Первая сетка карточек -->
+        <div class="kpi-metrics-grid">
+            <div class="kpi-card">
+                <div class="kpi-num color-accent-glow">2</div>
+                <div class="kpi-label">Собеседования с Уфанетом</div>
+            </div>
+            <div class="kpi-card highlight-success-border">
+                <div class="kpi-num color-success-glow">1</div>
+                <div class="kpi-label">Приглашение на работу (Оффер)</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-num color-muted-glow">1</div>
+                <div class="kpi-label">Обоюдный отказ</div>
+            </div>
+        </div>
+
+        <!-- Год над новыми скопированными карточками -->
+        <div class="history-year-title">Год 2024</div>
+
+        <!-- Вторая сетка карточек -->
+        <div class="kpi-metrics-grid">
+            <div class="kpi-card">
+                <div class="kpi-num color-accent-glow">1</div>
+                <div class="kpi-label">Приглашение на собеседование</div>
+            </div>
+            
+            <div class="kpi-card">
+                <div class="kpi-num color-muted-glow">1</div>
+                <div class="kpi-label">Обещали перезвонить, но не позвонили</div>
+            </div>
+        </div>
+
+        <div class="cta-proposal-block">
+            <div class="cta-info">
+                <h3>Перейдем на новый этап?</h3>
+                <p>Прошлый опыт доказал взаимный интерес. Предлагаю Уфанету объединить усилия и начать долгосрочное продуктивное сотрудничество уже в октябре.</p>
+            </div>
+            <button class="btn-cta-submit" id="cta-collaboration-btn">
+                Начать сотрудничество
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+        <!-- СЛАЙД 4: ИНТЕРАКТИВНЫЙ ОПЫТ РАБОТЫ -->
+        
+
+<section class="slide-section" id="experience-stats-section" data-index="3">
+    <div class="stats-page-layout">
+        
+        <div class="stepper-header">
+            <span class="header-pre">// Опыт в твердых цифрах</span>
+            <h2>Резюме профессиональной деятельности</h2>
+        </div>
+
+        <div class="stats-dashboard-grid">
+            
+            <!-- Карточка 1: Маркетинг & Интернет-маркетинг -->
+            <div class="stats-premium-card">
+                <div class="card-glow-eff"></div>
+                <div class="stats-card-header">
+                    <div class="big-stat-num text-accent">6,5</div>
+                    <div class="stat-unit">лет опыта</div>
+                </div>
+                <div class="stats-card-body">
+                    <h3 class="stats-main-title">Маркетинг & Интернет-маркетинг</h3>
+                    <p class="stats-description">
+                        Суммарный многолетний стек в классическом и цифровом маркетинге. Проектирование стратегий привлечения и масштабирование бизнес-метрик.
+                    </p>
+                    <div class="stats-sub-panel">
+                        <div class="panel-tag">// Структура бэкграунда</div>
+                        <ul class="stats-sub-list">
+                            <li><strong>4 года</strong> — Общий классический маркетинг</li>
+                            <li><strong>2,5 года</strong> — Интернет-маркетинг (Digital)</li>
+                        </ul>
+                    </div>
+                    <div class="stats-sub-panel">
+                        <div class="panel-tag">// Опыт работы в b2b (3 компании)</div>
+                        <div class="tags-container">
+                            <span class="tech-tag spec-b2b">Отрасль А (Строительство)</span>
+                            <span class="tech-tag spec-b2b">Отрасль Б (Транспорт)</span>
+                            <span class="tech-tag spec-b2b">Отрасль В (Консалтинг в строительстве)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 2: Контекстная реклама -->
+            <div class="stats-premium-card highlight-success-border">
+                <div class="card-glow-eff success-glow"></div>
+                <div class="stats-card-header">
+                    <div class="big-stat-num text-success">3</div>
+                    <div class="stat-unit">года опыта</div>
+                </div>
+                <div class="stats-card-body">
+                    <h3 class="stats-main-title">Управление контекстной рекламой</h3>
+                    <p class="stats-description">
+                        Глубокая экспертиза в performance-маркетинге, оптимизации стоимости лида (CPL) и возврата инвестиций (ROI/ROAS).
+                    </p>
+                    <div class="stats-sub-panel">
+                        <div class="panel-tag">// Масштаб деятельности</div>
+                        <ul class="stats-sub-list">
+                            <li>3 года - профильный стаж в роли контекстолога</li>
+                            <li>2 digital-агентства</li>
+                        </ul>
+                    </div>
+                    <div class="stats-sub-panel">
+                        <div class="panel-tag">// Проектные мощности</div>
+                        <div class="metric-analytics-block">
+                            <div class="metric-info">
+                                <span class="metric-label">Успешно реализовано проектов</span>
+                                <span class="metric-value">70+ Кейсов</span>
+                            </div>
+                            <div class="custom-progress-track">
+                                <div class="custom-progress-fill" style="width: 100%; background: linear-gradient(90deg, var(--color-success), #00ffcc);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- СЛАЙД 6: НАВЫКИ И ЗНАНИЯ (ПРОДУКТОВЫЙ ДАШБОРД) -->
+<section class="slide-section" data-index="4">
+    <div class="skills-dashboard-layout">
+        
+        <div class="stepper-header">
+            <div class="stepper-title-block">
+                <span class="header-pre">Инструменты & Компетенции</span>
+                <h2>Навыки и знания</h2>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            
+            <!-- 1. Маркетинговая стратегия -->
+            <div class="dash-card card-main-marketing">
+                <div class="dash-card-header">
+                    <div class="dash-icon">🎯</div>
+                    <h3>Маркетинговая стратегия & Анализ</h3>
+                </div>
+                <ul class="dash-list">
+                    <li><strong>Стратегия:</strong> Цепочка продукт ➔ трафик ➔ посадочная страница</li>
+                    <li><strong>Исследования:</strong> Анализ рынка, конкурентов и сегментация ЦА</li>
+                    <li><strong>Жизненный цикл:</strong> Развитие продукта на разных этапах жизненного цикла</li>
+                    <li><strong>Эксперименты:</strong> Запуск АБ-тестов для проверки продуктовых гипотез</li>
+                    <li><strong>Маркетинг:</strong> Автоворонки в email и инструменты WOW-маркетинга</li>
+                </ul>
+            </div>
+
+            <!-- 2. Метрики & Аналитика -->
+            <div class="dash-card card-analytics">
+                <div class="dash-card-header">
+                    <div class="dash-icon">📊</div>
+                    <h3>Аналитика & Метрики</h3>
+                </div>
+                <div class="metrics-pill-box">
+                    <span class="metric-pill" title="Cost Per Lead">CPL</span>
+                    <span class="metric-pill" title="Cost Per Order">CPO</span>
+                    <span class="metric-pill" title="Return on Investment">ROI</span>
+                    <span class="metric-pill" title="Return on Marketing Investment">ROMI</span>
+                    <span class="metric-pill" title="Lifetime Value">LTV</span>
+                </div>
+                <ul class="dash-list list-condensed">
+                    <li><strong>Сквозная аналитика:</strong> Roistat, Коллтрекинги</li>
+                    <li><strong>Платформы:</strong> Яндекс.Метрика, Google Analytics</li>
+                    <li><strong>BI & Data:</strong> Excel, Power BI <span class="badge badge-soft">базово</span></li>
+                </ul>
+            </div>
+
+            <!-- 3. Технический бэкграунд -->
+            <div class="dash-card card-tech">
+                <div class="dash-card-header">
+                    <div class="dash-icon">💻</div>
+                    <h3>Технический бэкграунд</h3>
+                </div>
+                <div class="tech-quote">
+                    «Говорю с программистами на одном языке»
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag tag-ready">SQL <small>(Оконные, Join, подзапросы)</small></span>
+                    <span class="tech-tag tag-ready">HTML / CSS</span>
+                    <span class="tech-tag tag-learning">JavaScript <small>(базово)</small></span>
+                    <span class="tech-tag tag-learning">Python <small>(в процессе)</small></span>
+                </div>
+                <ul class="dash-list list-condensed mt-auto">
+                    <li><strong>Проектирование:</strong> Составление ТЗ для разработчиков и дизайнеров, разработка прототипов сайтов</li>
+                </ul>
+            </div>
+
+            <!-- 4. Трафик & Каналы -->
+            <div class="dash-card card-traffic">
+                <div class="dash-card-header">
+                    <div class="dash-icon">⚡</div>
+                    <h3>Управление трафиком</h3>
+                </div>
+                <div class="traffic-widget">
+                    <div class="traffic-stat">
+                        <span class="stat-num">70+</span>
+                        <span class="stat-desc">Ниш в контекстной рекламе</span>
+                    </div>
+                </div>
+                <div class="traffic-channels">
+                    <div class="channel-item"><span>Контекстная реклама</span><div class="progress-bar bar-100"></div></div>
+                    <div class="channel-item"><span>Таргетированная реклама</span><div class="progress-bar bar-100"></div></div>
+                    <div class="channel-item"><span>SEO-оптимизация</span><div class="progress-bar bar-base"></div></div>
+                </div>
+            </div>
+
+            <!-- 5. Продуктовая Воронка AARRR -->
+            <div class="dash-card card-aarrr">
+                <div class="dash-card-header">
+                    <div class="dash-icon">⏳</div>
+                    <h3>Понимание AARRR-воронки</h3>
+                </div>
+                <div class="aarrr-funnel">
+                    <div class="funnel-stage" style="width: 100%"><span>Acquisition</span></div>
+                    <div class="funnel-stage" style="width: 90%"><span>Activation</span></div>
+                    <div class="funnel-stage" style="width: 80%"><span>Retention</span></div>
+                    <div class="funnel-stage" style="width: 70%"><span>Referral</span></div>
+                    <div class="funnel-stage" style="width: 60%"><span>Revenue</span></div>
+                </div>
+            </div>
+
+            <!-- 6. Инфраструктура & CRM -->
+            <div class="dash-card card-tools">
+                <div class="dash-card-header">
+                    <div class="dash-icon">🛠️</div>
+                    <h3>Инфраструктура & Команда</h3>
+                </div>
+                <div class="tools-grid">
+                    <span class="tool-badge">Bitrix24</span>
+                    <span class="tool-badge">AmoCRM</span>
+                    <span class="tool-badge">Мегаплан</span>
+                    <span class="tool-badge">Trello</span>
+                    <span class="tool-badge">ModX</span>
+                </div>
+                <div class="segments-box">
+                    <span class="seg-pill">Опыт с B2B</span>
+                    <span class="seg-pill">Опыт с B2C</span>
+                </div>
+                <p class="team-text">
+                    🤝 <strong>Командный игрок:</strong> Опыт взаимодействие с дизайнерами, веб-разработчиками, project-manager. Коммуникативные навыки для общения с клиентами.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- СЛАЙД 7: ФИНАЛЬНЫЙ ОФФЕР -->
+<section class="slide-section" data-index="5">
+    <div class="offer-page-layout">
+        
+        <!-- Эффект праздничного салюта/конфетти на заднем плане -->
+        <div class="confetti-container">
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+        </div>
+
+        <div class="offer-content-card">
+            <span class="offer-badge">Идеальный Match найден!</span>
+            <h2>Вы ознакомились с моим резюме. <br>Предлагаю начать работу!</h2>
+            
+            <!-- Блок CTA со ссылкой на hh.ru -->
+            <div class="offer-action-group">
+                <a href="https://ufa.hh.ru/resume/54c45804ff077db7be0039ed1f486278345748" target="_blank" rel="noopener noreferrer" class="btn-hh-link">
+                        Пригласить на собеседование через hh.ru
+                </a>
+            </div>
+        </div>
+
+        <!-- Веселая Гифка-реакция (Стильный мем-формат) -->
+        <div class="offer-gif-wrapper">
+            <img src="img/offer.gif" alt="Оффер" class="offer-gif" loading="lazy" />
+        </div>
+
+    </div>
+</section>
+
+
+    </main>
+
+    <!-- ОВЕРЛЕЙ ДЛЯ МОДАЛЬНОГО ОКНА С КОНТАКТАМИ -->
+    <div class="contacts-overlay" id="contacts-modal">
+        <div class="contacts-modal-box">
+            <div class="modal-badge">Контакты для связи</div>
+            <h2>Давайте начнем!</h2>
+            
+            <div class="modal-cards-list">
+                <div class="modal-info-card">
+                    <p class="modal-card-label">Платформа hh.ru</p>
+                    <a href="https://ufa.hh.ru/resume/54c45804ff077db7be0039ed1f486278345748" target="_blank" class="modal-link link-success">
+                        Пришлите приглашение на hh ↗
+                    </a>
+                </div>
+                
+                <div class="modal-info-card">
+                    <p class="modal-card-label">Телефонная связь</p>
+                    <a href="https://ufa.hh.ru/resume/54c45804ff077db7be0039ed1f486278345748" class="modal-link">
+                        Позвоните по номеру, указанному в резюме
+                    </a>
+                </div>
+            </div>
+            
+            <button class="close-modal-btn" id="close-contacts-btn">Закрыть окно</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
