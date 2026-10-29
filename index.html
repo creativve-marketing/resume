@@ -420,6 +420,51 @@
     </div>
 </section>
 
+                <!-- НОВЫЙ РАЗДЕЛ: СЛАЙДЕР РЕЗЮМЕ №2 (Вставляется в .app-container) -->
+<section class="slide-section" data-index="5" id="resume-slider-section">
+    
+    <!-- ФАЗА 1: Приветственный экран (Intro) -->
+    <div class="slider-intro-layout" id="slider-intro-screen">
+        <div class="slider-intro-content">
+            <span class="meta-tag">Дополнительно</span>
+            <p class="slider-intro-text">Если вас не убедило это резюме, то тогда посмотрите еще одно</p>
+            <button class="action-button-next" id="slider-btn-start">
+                Смотреть
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- ФАЗА 2: Интерактивная галерея слайдов -->
+    <div class="slider-gallery-layout slider-hidden" id="slider-gallery-screen">
+        <div class="slider-card">
+            
+            <!-- 1. БЛОК ГИФКИ -->
+            <div class="slider-image-container">
+                <img src="#" alt="" class="slider-gif" id="slider-current-img">
+                <div class="slider-counter" id="slider-counter-view">01 / 25</div>
+            </div>
+            
+            <!-- 2. БЛОК ТЕКСТА (СТРОГО ПОД ГИФКОЙ) -->
+            <div class="slider-meta">
+                <p class="slider-description" id="slider-text-view"></p>
+            </div>
+            
+            <!-- 3. БЛОК УПРАВЛЕНИЯ (СТРОГО ПОД ТЕКСТОМ) -->
+            <div class="slider-controls">
+                <button class="slider-nav-btn" id="slider-btn-prev" aria-label="Назад" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </button>
+                <button class="slider-nav-btn slider-btn-accent" id="slider-btn-next" aria-label="Вперед">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
 
     </main>
 
