@@ -841,3 +841,178 @@ body {
     90% { opacity: 1; }
     100% { top: 105%; transform: translateX(30px) rotate(350deg); opacity: 0; }
 }
+
+/* ==========================================================================
+   ИЗОЛИРОВАННЫЙ СЛАЙДЕР: ЧИСТАЯ ВЕРТИКАЛЬНАЯ СТРУКТУРА (NO-SCROLL)
+   ========================================================================== */
+
+   #resume-slider-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: clamp(20px, 4vh, 40px);
+    background-color: var(--bg-app);
+}
+
+/* Вспомогательный класс для скрытия экранов */
+.slider-hidden {
+    display: none !important;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   ФАЗА 1: Приветственный экран (Intro)
+   -------------------------------------------------------------------------- */
+
+.slider-intro-layout {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    animation: sliderContainerFade 0.4s ease-out forwards;
+}
+
+.slider-intro-text {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--text-primary);
+    margin-bottom: 32px;
+}
+
+/* --------------------------------------------------------------------------
+   ФАЗА 2: Интерактивная галерея (Гифка -> Текст -> Кнопки)
+   -------------------------------------------------------------------------- */
+
+.slider-gallery-layout {
+    width: 100%;
+    height: 100%;
+    max-width: 640px; /* Ограничиваем по ширине, чтобы гифки не разносило на пол-экрана */
+    max-height: 85vh; /* Ограничиваем по высоте для предотвращения скроллов */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: sliderContainerFade 0.4s ease-out forwards;
+}
+
+.slider-card {
+    width: 100%;
+    height: 100%;
+    background: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 24px;
+    
+    /* Четкая вертикальная сетка */
+    display: grid;
+    grid-template-rows: 1fr auto auto; /* 1. Гифка занимает остаток, 2. Текст, 3. Стрелки */
+    gap: 20px;
+    overflow: hidden;
+}
+
+/* 1. БЛОК ГИФКИ */
+.slider-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #09090d; /* Темная подложка, если пропорции гифки не совпадают */
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-gif {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Адаптирует любой размер без растяжений и обрезки */
+    display: block;
+}
+
+/* Счетчик поверх гифки (аккуратный, в углу) */
+.slider-counter {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(17, 17, 21, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--border-color);
+    padding: 4px 10px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* 2. БЛОК ТЕКСТА (СТРОГО ПОД ГИФКОЙ) */
+.slider-meta {
+    width: 100%;
+    text-align: center;
+    min-height: 48px; /* Резервируем место под 2 строки, чтобы верстка не прыгала */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-description {
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* 3. БЛОК УПРАВЛЕНИЯ (СТРОГО ПОД ТЕКСТОМ) */
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 4px;
+}
+
+.slider-nav-btn {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-panel-light);
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.slider-nav-btn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.slider-nav-btn.slider-btn-accent {
+    background: var(--color-accent);
+    border-color: transparent;
+    color: #ffffff;
+}
+
+.slider-nav-btn.slider-btn-accent:hover:not(:disabled) {
+    background: #ff661a;
+}
+
+.slider-nav-btn:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+
+/* Базовая анимация появления */
+@keyframes sliderContainerFade {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
