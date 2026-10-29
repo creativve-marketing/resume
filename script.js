@@ -266,3 +266,85 @@ window.addEventListener('DOMContentLoaded', () => {
     renderStep(0);
     initWorkplaceTimeline();
 });
+
+(function () {
+    const SLIDE_DATA = [
+        "Вы уже несколько раз посмотрели резюме",
+        "Но еще не пригласили на собеседование",
+        "Давайте поставим все точки над 'i'",
+        "На самом первом собеседовании вы сделали оффер",
+        "Но предложили зарплату меньше, чем указывалось в вакансии",
+        "Поэтому я взял время подумать",
+        "Затем вы задали вопрос 'Что для вас идеальная работа'",
+        "И похоже ответ вам не понравился, хотя там не было ничего такого кардинального",
+        "Это были просто классные условия труда",
+        "Из-за этих двух причин, вы отказали",
+        "Но это было просто недопонимание",
+        "Может быть, оставим это в прошлом?",
+        "Давайте проведем собеседование",
+        "Честно пообщаемся",
+        "И начнем работать",
+        "Ваша компания очень классная ",
+        "Зарплата 150к тоже роскошная",
+        "Вы уже делали оффер",
+        "И даже похвалили выполненное тестовое задание",
+        "Поэтому у вас интерес тоже должен быть",
+        "Все компании дают возможность 1 раз в полгода/год снова откликаться на вакансию",
+        "Поэтому давайте просто начнем работать",
+        "Как насчет собеседования 3 ноября в 15 часов?",
+        "Если готовы, то позвоните по номеру, указанному в резюме",
+        "Хорошего вам дня!"
+    ];
+
+    let currentSlideIndex = 0;
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const introScreen = document.getElementById("slider-intro-screen");
+        const galleryScreen = document.getElementById("slider-gallery-screen");
+        const btnStart = document.getElementById("slider-btn-start");
+        const btnPrev = document.getElementById("slider-btn-prev");
+        const btnNext = document.getElementById("slider-btn-next");
+        const viewImg = document.getElementById("slider-current-img");
+        const viewCounter = document.getElementById("slider-counter-view");
+        const viewText = document.getElementById("slider-text-view");
+
+        if (!introScreen || !galleryScreen || !btnStart) return;
+
+        btnStart.addEventListener("click", () => {
+            introScreen.classList.add("slider-hidden");
+            galleryScreen.classList.remove("slider-hidden");
+            renderSlide();
+        });
+
+        btnPrev.addEventListener("click", () => {
+            if (currentSlideIndex > 0) {
+                currentSlideIndex--;
+                renderSlide();
+            }
+        });
+
+        btnNext.addEventListener("click", () => {
+            if (currentSlideIndex < SLIDE_DATA.length - 1) {
+                currentSlideIndex++;
+                renderSlide();
+            }
+        });
+
+        function renderSlide() {
+            const currentText = SLIDE_DATA[currentSlideIndex];
+            const slideNumber = currentSlideIndex + 1;
+
+            viewText.textContent = currentText;
+            viewCounter.textContent = `${slideNumber.toString().padStart(2, '0')} / ${SLIDE_DATA.length}`;
+            
+            console.log("Пытаюсь загрузить гифку по пути:");
+            viewImg.setAttribute("src", `./img/gif/slide${slideNumber}.gif`);
+
+            viewImg.setAttribute("alt", "");
+
+
+            btnPrev.disabled = currentSlideIndex === 0;
+            btnNext.disabled = currentSlideIndex === SLIDE_DATA.length - 1;
+        }
+    });
+})();
